@@ -1,0 +1,97 @@
+---
+layout: page
+title: Menu Tester X.2
+permalink: /menu_tester_x/
+---
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+    <form id="test">
+      <h1>Burgers</h1>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<td>What is inside of the DragonSlayer?</td>
+<td>Patty?</td>
+<td>
+<input id="dragon_patty" maxlength="4" name="dragon_patty" size="4" type="text" /></td>
+<td>Greens?</td>
+<td>
+<input id="dragon_spring" maxlength="6" name="dragon_spring" size="6" type="text" /></td>
+<td>Onions?</td>
+<td>
+<input id="dragon_onions" maxlength="3" name="dragon_onions" size="3" type="text" /></td>
+<td>Bacon?</td>
+<td>
+<input id="dragon_bacon" maxlength="3" name="dragon_bacon" size="3" type="text" /></td>
+<td>Avocado?</td>
+<td>
+<input id="dragon_avocado" maxlength="3" name="dragon_avocado" size="3" type="text" /></td>
+<td>Sauce?</td>
+<td>
+<input id="dragon_sauce" maxlength="7" name="dragon_sauce" size="7" type="text" /></td>
+<td>Tomato?</td>
+<td>
+<input id="dragon_tomato" maxlength="3" name="dragon_tomato" size="3" type="text" /></td>
+<td>Pickles?</td>
+<td>
+<input id="dragon_pickles" maxlength="3" name="dragon_pickles" size="3" type="text" /></td>
+
+</tr>
+</table>
+<input onclick="gradeTest()" name="submit" type="button" value="Grade This Test" />
+</form>
+<script type="text/javascript">
+alert("Warning: For the menu test food items will have shortened names. Example: Dragonslayer patty=bleu patty and Smoked Bacon simply = bacon.")
+function gradeTest() {
+   //variables with global implications
+   var totalQuestions = 8;
+   var correctAnswers = 0;
+   var alertText = "Hey there cub, looks like your becominga bear!";
+   var i;
+   var a1 = document.getElementById('dragon_patty').value.toLowerCase();
+   if(a1 == "bleu") {
+      correctAnswers++;
+   }
+   var a2 = document.getElementById('dragon_spring').value.toLowerCase();
+   if(a2 == 'spring') {
+      correctAnswers++;
+   }
+   var a3 = document.getElementById('dragon_onions').value.toLowerCase();
+   if(a3 == 'raw') {
+      correctAnswers++;
+   }
+   var a4 = document.getElementById('dragon_bacon').value.toLowerCase();
+   if(a4 == "yes") {
+      correctAnswers++;
+   }
+   var a5 = document.getElementById('dragon_avocado').value.toLowerCase();
+   if(a5 == "no") {
+      correctAnswers++;
+   }
+   var a6 = document.getElementById('dragon_sauce').value.toLowerCase();
+   if(a6 == "buffalo") {
+      correctAnswers++;
+   }
+   var a7 = document.getElementById('dragon_tomato').value.toLowerCase();
+   if(a7 == "yes") {
+      correctAnswers++;
+   }
+   var a8 = document.getElementById('dragon_pickles').value.toLowerCase();
+   if(a8 == "yes") {
+      correctAnswers++;
+   }
+   if(correctAnswers == totalQuestions) {
+         alertText = "Congratulations! You have become a bear little cub!";
+      }
+      else {
+         alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+      }
+      alert(alertText);
+   }
+
+
+</script>
+	</body>
+</html>
